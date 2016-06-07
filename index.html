@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="guitar, guitar canvas, shredding canvas, algorithmic composition, music">
+    <meta name="author" content="uduk">
+    <link rel="icon" href="favicon.ico">
+
+    <title>UDUK - ZE → Z + E</title>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/uduk.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/sequence.js"></script>
+    <script type="text/javascript" src="js/paper-full.min.js"></script>
+    <script type="text/paperscript" src="js/fretboard6.js" canvas="Canvas6"></script>
+    <script type="text/javascript" src="js/Tone.min.js"></script>
+  </head>
+
+  <script type="text/paperscript" src="js/uduk.js" canvas="Canvas6"></script>
+
+  <body>
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">n-gram</span>
+      <input id="ngram" type="text" class="form-control" placeholder="size | scale | tempo , i.e [1]: 4 | c,d,eb,f,g,a,b | 180 -- i.e [2]: 4 | chromatic | 180 -- i.e [3]: batik 180" aria-describedby="basic-addon1">
+      <span class="input-group-btn">
+        <button id="play"class="btn btn-warning" type="button">Play!</button>
+        <button id="clear"class="btn btn-success" type="button">Clear</button>
+        <button id="load"class="btn btn-info" type="button">Load</button>
+        <button id="save"class="btn btn-danger" type="button" data-toggle="modal" data-target="#myModal">Save</button>
+      </span>
+    </div>
+
+    <div id="canvas" style="visibility: hidden; display: none"><canvas id="Canvas6" width="1200" height="600" style="border:1px solid #333333;"></canvas></div>
+
+    <div id="footer" class="mastfoot" style="visibility: hidden; display: none">
+      <span id="auto-pilot" class="label label-default"><a href="#" id="autopilotref">Auto Pilot</a></span>
+      <span id="blind" class="label label-primary"><a href="#" id="blindref">Blind Mode</a></span>
+      <span class="label label-success"><a href="#">Theory</a></span>
+      <span class="label label-info"><a href="#">Main-Z</a></span>
+      <span class="label label-danger"><a href="#">Zonify</a></span>
+      <span class="label label-warning"><a href="#">Dataset</a></span>
+      <div class="inner">
+        <p>&copy;2016 <a href="http://github.com/uduk">UDUK github</a> - <a href="credits.html">Powered by [...]</a></p>
+      </div>
+    </div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-78710979-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </body>
+</html>
