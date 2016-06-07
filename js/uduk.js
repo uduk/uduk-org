@@ -379,8 +379,8 @@ function playZhred() {
 
 $(document).ready(function() {
 
-  $('#canvas').delay(300).css('visibility','visible').hide().fadeIn("slow");
-  $('#footer').delay(300).css('visibility','visible').hide().fadeIn("slow");
+  $('#canvas').delay(200).css('visibility','visible').hide().fadeIn("slow");
+  $('#footer').delay(200).css('visibility','visible').hide().fadeIn("slow");
 
   initializeToneJS();
 
