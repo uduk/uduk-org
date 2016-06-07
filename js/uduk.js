@@ -378,7 +378,7 @@ function playZhred() {
 }
 
 function loadDrawer(processed) {
-  clearDots();
+  clearAllCanvas();
   var uniqueProcessed = UdukUtil.unique(processed);
   for (var i = 0; i < uniqueProcessed.length; i++) {
     var d = drawSeq6(f, uniqueProcessed[i], "l");
