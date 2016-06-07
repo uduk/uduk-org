@@ -159,7 +159,7 @@ function initializeToneJS() {
     "type": "custom",
     "partials" : [2, 1, 2, 2],
     "phase": 0,
-    "volume": 1
+    "volume": 0
   },
     "envelope": {
     "attack": 0.005,
@@ -168,7 +168,7 @@ function initializeToneJS() {
     "release": 1,
   },
     "portamento": 0.01,
-    "volume": -18
+    "volume": -20
   };
 
   ToneJS_Synth_L = new Tone.SimpleSynth(synthSettings).connect(merge.left);
