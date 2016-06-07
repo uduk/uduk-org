@@ -226,8 +226,8 @@ function playAutoPilot() {
     var pattern = ["upDown", "downUp", "alternateUp", "alternateDown", "random", "randomWalk", "randomOnce"];
 
     ToneJS_Pattern_Pattern = new Tone.Pattern(function(time, note){
-      ToneJS_Synth_L.triggerAttackRelease(note, "4n", time);
-      ToneJS_Synth_R.triggerAttackRelease(note, "4n", time);
+      ToneJS_Synth_L.triggerAttackRelease(note, "16n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "16n", time);
     },seqReady, pattern[rndIndex]).start();
     ToneJS_Pattern_Pattern.humanize = true;
   }
@@ -235,8 +235,8 @@ function playAutoPilot() {
   else {
     var patternSeq = ["C4", "D4", "E4", "F4", "G4", "A4", "B4"];
     ToneJS_Pattern_Pattern = new Tone.Pattern(function(time, note){
-      ToneJS_Synth_L.triggerAttackRelease(note, "4n", time);
-      ToneJS_Synth_R.triggerAttackRelease(note, "4n", time);
+      ToneJS_Synth_L.triggerAttackRelease(note, "8n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "8n", time);
     },patternSeq, "randomWalk").start();
     ToneJS_Pattern_Pattern.humanize = true;
   }
