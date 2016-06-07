@@ -468,7 +468,7 @@ $(document).ready(function() {
       ZhredCanvas_Raster = new Raster('img/frog.png');
       ZhredCanvas_Raster.position = view.center;
       ZhredCanvas_Raster.opacity = 0.8;
-      ZhredCanvas_Block. = drawBlock6(1,24);
+      ZhredCanvas_Block = drawBlock6(1, 24);
     }
     else {
       Tone.Transport.stop();
