@@ -168,7 +168,7 @@ function initializeToneJS() {
     "release": 1,
   },
     "portamento": 0.01,
-    "volume": -10
+    "volume": -18
   };
 
   ToneJS_Synth_L = new Tone.SimpleSynth(synthSettings).connect(merge.left);
