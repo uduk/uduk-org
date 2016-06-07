@@ -11,6 +11,7 @@ o   o o-o   o   o o  o
 var f = UdukFretboard6(100, 120, ["e", "B", "G", "D", "A", "E"]);
 
 var ZhredCanvas_Line, ZhredCanvas_Lines = [], ZhredCanvas_Circles = [], ZhredCanvas_Notes =[];
+var ZhredCanvas_Raster;
 var content = "zhredBoard | klik dan geser / click and drag / cliquer et faire glisser / クリックしてドラッグ / 클릭하고 드래그";
 
 var ZhredCanvas_TextItem = new PointText({
@@ -464,12 +465,17 @@ $(document).ready(function() {
     if (ZhredSequence_AutoPilot) {
       playAutoPilot(); 
       $("#autopilotref").text("Stop");
+      ZhredCanvas_Raster = new Raster('img/robot.png');
+      raster.position = view.center;
+      raster.opacity = 0.8;
     }
     else {
       Tone.Transport.stop();
       ToneJS_Pattern_Pattern.dispose();
       delete ToneJS_Pattern_Pattern;
       $("#autopilotref").text("Auto Pilot");
+      ZhredCanvas_Raster.remove();
+      delete ZhredCanvas_Raster;
     }
   });
 
