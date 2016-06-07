@@ -10,6 +10,7 @@ o   o o-o   o   o o  o
 
 var f = UdukFretboard6(100, 120, ["e", "B", "G", "D", "A", "E"]);
 
+var ZhredCanvas_Active = false;
 var ZhredCanvas_Line, ZhredCanvas_Lines = [], ZhredCanvas_Circles = [], ZhredCanvas_Notes =[];
 var content = "zhredBoard | klik dan geser / click and drag / cliquer et faire glisser / クリックしてドラッグ / 클릭하고 드래그";
 
@@ -39,6 +40,7 @@ function clearDots() {
 }
 
 function clearAllCanvas() {
+  ZhredCanvas_Active = false;
   ZhredCanvas_TextItem.content = content;
   document.getElementById("ngram").value = "";
 
@@ -78,6 +80,8 @@ function clearAllCanvas() {
 }
 
 function onMouseDown(event) {
+  ZhredCanvas_Active = true;
+  
   if (checkCanvasBoundary(event)) { 
     getHitNote(event);
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
@@ -99,7 +103,7 @@ function onMouseDown(event) {
 }
 
 function onMouseDrag(event) {
-  if (checkCanvasBoundary(event)) { 
+  if (checkCanvasBoundary(event) && ZhredCanvas_Active) { 
     getHitNote(event);
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
     ZhredCanvas_Line.add(event.point);
