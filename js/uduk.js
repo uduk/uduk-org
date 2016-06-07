@@ -159,7 +159,7 @@ function initializeToneJS() {
     "type": "custom",
     "partials" : [2, 1, 2, 2],
     "phase": 0,
-    "volume": 0
+    "volume": 9
   },
     "envelope": {
     "attack": 0.005,
