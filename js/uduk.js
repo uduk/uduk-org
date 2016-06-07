@@ -226,8 +226,8 @@ function playAutoPilot() {
     var pattern = ["upDown", "downUp", "alternateUp", "alternateDown", "random", "randomWalk", "randomOnce"];
 
     ToneJS_Pattern_Pattern = new Tone.Pattern(function(time, note){
-      ToneJS_Synth_L.triggerAttackRelease(note, "32n", time);
-      ToneJS_Synth_R.triggerAttackRelease(note, "32n", time);
+      ToneJS_Synth_L.triggerAttackRelease(note, "8n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "8n", time);
     },seqReady, pattern[rndIndex]).start();
     ToneJS_Pattern_Pattern.humanize = true;
   }
