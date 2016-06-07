@@ -211,7 +211,39 @@ function playMetronome(tempo) {
 }
 
 function playAutoPilot() {
- console.log("Hello");
+  Tone.Transport.timeSignature = [4, 4];
+  Tone.Transport.bpm.value = 180;
+  Tone.Transport.PPQ.value = 96;
+  
+  if (ZhredSequence_HitNote.length >= 5 && ZhredSequence_HitNote.length <= 12) {
+    var uniqueProcessed = UdukUtil.unique(ZhredSequence_HitNote);
+    var seqReady = UdukSequence.toMIDI(ZhredSequence_HitNote);
+    seqReady = seqReady.sort();
+    seqReady = seqReady.slice(0, ZhredSequence_HitNote.length + 1);
+
+    var rndIndex = Math.floor(Math.random() * 7;
+    var pattern = ["upDown", "downUp", "alternateUp", "alternateDown", "random", "randomWalk", "randomOnce"];
+
+    ToneJS_Pattern_Pattern = new Tone.Pattern(function(time, note){
+      ToneJS_Synth_L.triggerAttackRelease(note, "4n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "4n", time);
+    },patternSeq, pattern[rndIndex]).start();
+    ToneJS_Pattern_Pattern.humanize = true;
+
+    Tone.Transport.start();
+  }
+
+  else {
+    var patternSeq = ["C4", "D4", "E4", "F4", "G4", "A4", "B4"];
+
+    ToneJS_Pattern_Pattern = new Tone.Pattern(function(time, note){
+      ToneJS_Synth_L.triggerAttackRelease(note, "4n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "4n", time);
+    },patternSeq, "randomWalk").start();
+    ToneJS_Pattern_Pattern.humanize = true;
+
+    Tone.Transport.start();
+  }
 }
 
 function playToneJS(sequence, tempo) {
