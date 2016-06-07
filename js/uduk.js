@@ -377,6 +377,37 @@ function playZhred() {
   }
 }
 
+function loadDrawer(processed) {
+  clearDots();
+  var uniqueProcessed = UdukUtil.unique(processed);
+  for (var i = 0; i < uniqueProcessed.length; i++) {
+    var d = drawSeq6(f, uniqueProcessed[i], "l");
+    ZhredCanvas_Notes.push(d);
+  }
+}
+
+function handleFile(evt) {
+  var f = evt.target.files[0]; 
+
+  if (f) {
+    var r = new FileReader();
+    r.onload = function(e) { 
+      var inputLoad = e.target.result;
+      inputLoad = inputLoad.replace(/ /g,'');
+      var inputParse = inputLoad.split("|");
+      var tempo = inputParse[0];
+      var processed = inputParse[1].split(",");
+
+      loadDrawer(processed); 
+
+      var seqReady = UdukSequence.toMIDI(processed);
+      playToneJS(seqReady, tempo);
+    }
+    r.readAsText(f);
+  } else { alert("Failed to load file"); }
+
+}
+  
 $(document).ready(function() {
 
   $('#canvas').delay(200).css('visibility','visible').hide().fadeIn("slow");
@@ -403,26 +434,6 @@ $(document).ready(function() {
   $("#save").click(function() {
     if (ZhredSequence_Save !== undefined) {
       alert("скопіювати і вставити в текстовий файл: \n" + ZhredSequence_Save);
-    }
-  });
-
-  $("#load").click(function() {
-    var inputLoad = $("#ngram").val();
-    if (inputLoad) {
-      var inputLoad = inputLoad.replace(/ /g,'');
-      var inputParse = inputLoad.split("|");
-      var tempo = inputParse[0];
-      var processed = inputParse[1].split(",");
-      
-      clearDots();
-      var uniqueProcessed = UdukUtil.unique(processed);
-      for (var i = 0; i < uniqueProcessed.length; i++) {
-        var d = drawSeq6(f, uniqueProcessed[i], "l");
-        ZhredCanvas_Notes.push(d);
-      }
-
-      var seqReady = UdukSequence.toMIDI(processed);
-      playToneJS(seqReady, tempo);
     }
   });
 
@@ -474,6 +485,9 @@ $(document).ready(function() {
       $("#blindref").text("Blind Mode");
     }
   });
+  
+  var inputElement = document.getElementById("upload");
+  inputElement.addEventListener("change", handleFile, false);
 
   console.log("%c ZhredCanvas v1.0", "background: #000; color: #fff");
 });
