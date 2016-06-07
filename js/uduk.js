@@ -11,7 +11,7 @@ o   o o-o   o   o o  o
 var f = UdukFretboard6(100, 120, ["e", "B", "G", "D", "A", "E"]);
 
 var ZhredCanvas_Line, ZhredCanvas_Lines = [], ZhredCanvas_Circles = [], ZhredCanvas_Notes =[];
-var ZhredCanvas_Raster;
+var ZhredCanvas_Raster, ZhredCanvas_Block;
 var content = "zhredBoard | klik dan geser / click and drag / cliquer et faire glisser / クリックしてドラッグ / 클릭하고 드래그";
 
 var ZhredCanvas_TextItem = new PointText({
@@ -468,6 +468,7 @@ $(document).ready(function() {
       ZhredCanvas_Raster = new Raster('img/frog.png');
       ZhredCanvas_Raster.position = view.center;
       ZhredCanvas_Raster.opacity = 0.8;
+      ZhredCanvas_Block. = drawBlock6(1,24);
     }
     else {
       Tone.Transport.stop();
@@ -476,6 +477,7 @@ $(document).ready(function() {
       $("#autopilotref").text("Auto Pilot");
       ZhredCanvas_Raster.remove();
       delete ZhredCanvas_Raster;
+      ZhredCanvas_Block.remove();
     }
   });
 
