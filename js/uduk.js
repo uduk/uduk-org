@@ -465,9 +465,9 @@ $(document).ready(function() {
     if (ZhredSequence_AutoPilot) {
       playAutoPilot(); 
       $("#autopilotref").text("Stop");
-      ZhredCanvas_Raster = new Raster('img/robot.png');
-      raster.position = view.center;
-      raster.opacity = 0.8;
+      ZhredCanvas_Raster = new Raster('img/frog.png');
+      ZhredCanvas_Raster.position = view.center;
+      ZhredCanvas_Raster.opacity = 0.8;
     }
     else {
       Tone.Transport.stop();
