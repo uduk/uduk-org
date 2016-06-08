@@ -76,6 +76,11 @@ function clearAllCanvas() {
     delete ToneJS_Metronome_Snare;
     delete ToneJS_Metronome_SnarePart;
   }
+  
+  if (ZhredCanvas_Raster) {
+    ZhredCanvas_Raster.remove();
+    delete ZhredCanvas_Raster;
+  }
 }
 
 function onMouseDown(event) {
@@ -495,40 +500,33 @@ $(document).ready(function() {
     }
   });
   
-  var ZhredBoard_Zonify = false;
   $("#zonify").click(function() {
     var noteMap = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4"];
-    ZhredBoard_Zonify = !ZhredBoard_Zonify;
-    if (ZhredBoard_Zonify) {
-      var ngram = document.getElementById('ngram').value;
-      if (ngram.match(/(http(s?))\:\/\//gi)) {
-        $.ajax({url: ngram, success: function(result){
-          ZhredCanvas_Raster = new Raster('img/robot.png');
-          ZhredCanvas_Raster.position = view.center;
-          ZhredCanvas_Raster.opacity = 0.8;
+    var ngram = document.getElementById('ngram').value;
+    if (ngram.match(/(http(s?))\:\/\//gi)) {
+    
+      $.getJSON(ngram, function(data) {
+        
+        ZhredCanvas_Raster = new Raster('img/robot.png');
+        ZhredCanvas_Raster.position = view.center;
+        ZhredCanvas_Raster.opacity = 0.8;
 
-          result = result.slice(512, 1024);
-          result = result.toUpperCase();
-          var seqReady = [];
-          for (var i = 0; i < result.length; i++) {
-            if (result[i].charCodeAt(0) >= 64 && result[i].charCodeAt(0) <= 71) {
-              seqReady.push(result[i] + "" + 4);
-            }
-            else {
-              var noteIdx = Math.floor(Math.random() * (12 - 0)) + 0;
-              seqReady.push(noteMap[noteIdx]);
-            }
+        var result = JSON.stringify(data);
+        result = result.toUpperCase();
+        var seqReady = [];
+        for (var i = 0; i < result.length; i++) {
+          if (result[i].charCodeAt(0) >= 64 && result[i].charCodeAt(0) <= 71) {
+            seqReady.push(result[i] + "" + 4);
           }
-          playToneJS(seqReady, 165);
-        }});
-        $("#zonifyref").text("Off");
-      }
-    }
-    else {
-      ZhredCanvas_Raster.remove();
-      delete raster;
-      $("#zonifyref").text("Zonify");
-      clearAllCanvas();
+          else {
+            var noteIdx = Math.floor(Math.random() * (12 - 0)) + 0;
+            seqReady.push(noteMap[noteIdx]);
+          }
+        }
+              
+        playToneJS(seqReady, Math.floor(Math.random() * (171 - 160)) + 160);
+       });
+
     }
 
   });
