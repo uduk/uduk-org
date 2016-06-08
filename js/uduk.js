@@ -507,9 +507,8 @@ $(document).ready(function() {
           ZhredCanvas_Raster.position = view.center;
           ZhredCanvas_Raster.opacity = 0.8;
 
-          result = result.slice(0 ,512);
+          result = result.slice(512, 1024);
           result = result.toUpperCase();
-          console.log(result);
           var seqReady = [];
           for (var i = 0; i < result.length; i++) {
             if (result[i].charCodeAt(0) >= 64 && result[i].charCodeAt(0) <= 71) {
