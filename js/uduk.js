@@ -446,13 +446,14 @@ $(document).ready(function() {
     else if (ngram.match(/batik\s*\d{2}/g)) {
       $("#ngram").css("background-color", "#ddd");
     }
-    else if (ngram.match(/\d{1} [\174] chromatic [\174] \d{2}/g))
-    {
+    else if (ngram.match(/\d{1} [\174] chromatic [\174] \d{2}/g)) {
       $("#ngram").css("background-color", "#00BFFF");
     }
-    else if (ngram.match(/\d{1} [a-zA-Z 0-9\#\,\|]* \d{2}/g))
-    {
+    else if (ngram.match(/\d{1} [a-zA-Z 0-9\#\,\|]* \d{2}/g)) {
       $("#ngram").css("background-color", "#FFA500");
+    }
+    else if (ngram.match(/(http(s?))\:\/\//gi)) {
+      $("#ngram").css("background-color", "##C0FF3E");
     }
     else {
       $("#ngram").css("background-color", "#fff");
