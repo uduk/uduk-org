@@ -19,6 +19,11 @@ a:hover {
   border: 1px solid #fff;
 }
 
+/* Chrome blue border */
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
 /* Custom dropdown */
 .dropdown-toggle:active, .open .dropdown-toggle {background:#333 !important; color:#c7c7c7 !important;}
 .dropdown-menu {background:#333}
