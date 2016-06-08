@@ -453,7 +453,7 @@ $(document).ready(function() {
       $("#ngram").css("background-color", "#FFA500");
     }
     else if (ngram.match(/(http(s?))\:\/\//gi)) {
-      $("#ngram").css("background-color", "##C0FF3E");
+      $("#ngram").css("background-color", "#C0FF3E");
     }
     else {
       $("#ngram").css("background-color", "#fff");
