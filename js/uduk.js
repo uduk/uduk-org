@@ -498,6 +498,7 @@ $(document).ready(function() {
   var ZhredBoard_Zonify = false;
   $("#zonify").click(function() {
     var noteMap = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4"];
+    ZhredBoard_Zonify = !ZhredBoard_Zonify;
     if (ZhredBoard_Zonify) {
       var ngram = document.getElementById('ngram').value;
       if (ngram.match(/(http(s?))\:\/\//gi)) {
@@ -519,7 +520,6 @@ $(document).ready(function() {
             }
           }
           playToneJS(seqReady, 165);
-          ZhredBoard_Zonify = !ZhredBoard_Zonify;
         }});
         $("#zonifyref").text("Off");
       }
