@@ -85,7 +85,7 @@ function clearAllCanvas() {
 
 function onMouseDown(event) {
   if (checkCanvasBoundary(event)) { 
-    getHitNote(event);
+    var x = getHitNote(event);
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
     cDown = new Path.Circle({
       center: event.point,
@@ -101,6 +101,19 @@ function onMouseDown(event) {
     ZhredCanvas_Line.strokeWidth = 12;
     ZhredCanvas_Line.opacity = 0.4;
     ZhredCanvas_Lines.push(ZhredCanvas_Line);
+    
+    var root = x.charAt(0).toString();
+    var two = x.substr(1, 2).toString();
+    var z = two.charAt(0).toString();
+    var subroot = "";
+
+    if (parseInt(z) == 0) {
+      subroot = two.charAt(1);
+    } else {
+      subroot = two;
+    }
+
+    ToneJS_Synth_R.triggerAttackRelease(UdukSequence.toMIDINote(root, subroot), "16n");
   }
 }
 
@@ -137,16 +150,20 @@ function checkCanvasBoundary(event) {
 }
 
 function getHitNote(event) {
+ var ret;
   var ss = Math.round ((event.point.y + 30 - f[1]) / 30); 
   var ff = Math.round ((event.point.x - f[0] - 20 + 40) / 40); 
   if(ff >= 0 && ff < 10) {
     var z = ss + "0" + ff;
     ZhredSequence_HitNote.push(z);
+    ret = z;
   }
   else {
     var z = ss + "" + ff;
     ZhredSequence_HitNote.push(z);
+    ret = z;
   }
+  return ret;
 }
 
 function initializeToneJS() {
