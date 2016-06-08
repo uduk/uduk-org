@@ -506,7 +506,7 @@ $(document).ready(function() {
           ZhredCanvas_Raster.position = view.center;
           ZhredCanvas_Raster.opacity = 0.8;
 
-          result = result.slice(0 ,128);
+          result = result.slice(0 ,256);
           result = result.toUpperCase();
           var seqReady = [];
           for (var i = 0; i < result.length; i++) {
