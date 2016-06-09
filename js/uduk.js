@@ -102,18 +102,8 @@ function onMouseDown(event) {
     ZhredCanvas_Line.opacity = 0.4;
     ZhredCanvas_Lines.push(ZhredCanvas_Line);
     
-    var root = x.charAt(0).toString();
-    var two = x.substr(1, 2).toString();
-    var z = two.charAt(0).toString();
-    var subroot = "";
-
-    if (parseInt(z) == 0) {
-      subroot = two.charAt(1);
-    } else {
-      subroot = two;
-    }
-
-    ToneJS_Synth_R.triggerAttackRelease(UdukSequence.toMIDINote(root, subroot), "16n");
+    var r = UdukSequence.splitNote(x);
+    ToneJS_Synth_R.triggerAttackRelease(UdukSequence.toMIDINote(r[0], r[1]), "16n");
   }
 }
 
