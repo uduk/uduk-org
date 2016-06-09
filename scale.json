@@ -1,0 +1,517 @@
+{ 
+
+  "title"           : "Musical Chords and Scales",
+  "originalURL"     : "https://www.cs.cmu.edu/~scottd/chords_and_scales/music.html",
+  "toJSON"          : "UDUK",
+
+  "Major" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F", "G", "A", "B" ]     },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "F#", "G#", "A#", "C" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G", "A", "B", "C#" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "G#", "A#", "C", "D" ]  },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A", "B", "C#", "D#" ] },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "A#", "C", "D", "E" ]    },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "B", "C#", "D#", "F" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C", "D", "E", "F#" ]    },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "C#", "D#", "F", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D", "E", "F#", "G#" ]  },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "D#", "F", "G", "A" ]   },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "E", "F#", "G#", "A#" ]}
+  ],  
+
+  "Natural minor" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "G", "G#", "A#" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G#", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "A", "A#", "C" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A#", "B", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "B", "C", "D" ]    },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "C", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C#", "D", "E" ]  },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "D", "D#", "F" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D#", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "E", "F", "G" ]     },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "F", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F#", "G", "A" ]   }
+  ],
+
+  "Harmonic minor" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "G", "G#", "B" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G#", "A", "C" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "A", "A#", "C#" ]  },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A#", "B", "D" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "B", "C", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "C", "C#", "E" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C#", "D", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "D", "D#", "F#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D#", "E", "G" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "E", "F", "G#" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "F", "F#", "A" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F#", "G", "A#" ] }
+  ],
+ 
+  "Melodic minor" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "G", "A", "B" ]    },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G#", "A#", "C" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "A", "B", "C#" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A#", "C", "D" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "B", "C#", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "C", "D", "E" ]   },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C#", "D#", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "D", "E", "F#" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D#", "F", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "E", "F#", "G#" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "F", "G", "A" ]  },
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F#", "G#", "A#" ] }
+  ],
+
+  "Major pentatonic" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "G", "A" ]     },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "G#", "A#" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "A", "B" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "A#", "C" ]   },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "B", "C#" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "C", "D" ]     },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "C#", "D#" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "D", "E" ]     },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "D#", "F" ]  },
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "E", "F#" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "F", "G" ]    },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "F#", "G#" ] }
+  ],
+ 
+  "Minor pentatonic" : [
+    {"root"  : "C",  "note" : [ "C", "D#", "F", "G", "A#" ]   },
+    {"root"  : "C#", "note" : [ "C#", "E", "F#", "G#", "B" ]  },
+    {"root"  : "D",  "note" : [ "D", "F", "G", "A", "C" ]     },
+    {"root"  : "D#", "note" : [ "D#", "F#", "G#", "A#", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "G", "A", "B", "D" ]     },
+    {"root"  : "F",  "note" : [ "F", "G#", "A#", "C", "D#" ]  },
+    {"root"  : "F#", "note" : [ "F#", "A", "B", "C#", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "A#", "C", "D", "F" ]    },
+    {"root"  : "G#", "note" : [ "G#", "B", "C#", "D#", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "C", "D", "E", "G" ]     },
+    {"root"  : "A#", "note" : [ "A#", "C#", "D#", "F", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "D", "E", "F#", "A" ]    }
+  ],
+
+  "Blues" : [
+    {"root"  : "C",  "note" : [ "C", "D#", "F", "F#", "G", "A#" ]  },
+    {"root"  : "C#", "note" : [ "C#", "E", "F#", "G", "G#", "B" ]  },
+    {"root"  : "D",  "note" : [ "D", "F", "G", "G#", "A", "C" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F#", "G#", "A", "A#", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "G", "A", "A#", "B", "D" ]    },
+    {"root"  : "F",  "note" : [ "F", "G#", "A#", "B", "C", "D#" ]  },
+    {"root"  : "F#", "note" : [ "F#", "A", "B", "C", "C#", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "A#", "C", "C#", "D", "F" ]   },
+    {"root"  : "G#", "note" : [ "G#", "B", "C#", "D", "D#", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "C", "D", "D#", "E", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "C#", "D#", "E", "F", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "D", "E", "F", "F#", "A" ]    }
+  ],
+ 
+  "Minor blues" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "F#", "G", "G#", "A#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G", "G#", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "G#", "A", "A#", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A", "A#", "B", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "A#", "B", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "B", "C", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C", "C#", "D", "E" ]  },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "C#", "D", "D#", "F" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D", "D#", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "D#", "E", "F", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "E", "F", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F", "F#", "G", "A" ]   }
+  ],
+
+  "Major blues" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "E", "F", "F#", "G", "A", "A#" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F", "F#", "G", "G#", "A#", "B" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "F#", "G", "G#", "A", "B", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G", "G#", "A", "A#", "C", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "G#", "A", "A#", "B", "C#", "D" ] },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A", "A#", "B", "C", "D", "D#" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "A#", "B", "C", "C#", "D#", "E" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "B", "C", "C#", "D", "E", "F" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C", "C#", "D", "D#", "F", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "C#", "D", "D#", "E", "F#", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D", "D#", "E", "F", "G", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "D#", "E", "F", "F#", "G#", "A" ] }
+  ],
+ 
+  "Augmented" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F#", "G#", "A#" ]},
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "G", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G#", "A#", "C" ]},
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "A", "B", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A#", "C", "D" ]},
+    {"root"  : "F",  "note" : [ "F", "G", "A", "B", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "C", "D", "E" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C#", "D#", "F" ] },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "D", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D#", "F", "G" ] },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "E", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "F", "G", "A" ] }
+  ],
+
+  "Diminished" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "F#", "G#", "A", "B" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G", "A", "A#", "C" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "G#", "A#", "B", "C#" ] },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A", "B", "C", "D" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "A#", "C", "C#", "D#" ]},
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "B", "C#", "D", "E" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C", "D", "D#", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "C#", "D#", "E", "F#" ]},
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D", "E", "F", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "D#", "F", "F#", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "E", "F#", "G", "A" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F", "G", "G#", "A#" ] }
+  ],
+ 
+  "Phrygian-Dominant" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "E", "F", "G", "G#", "A#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D", "F", "F#", "G#", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "D#", "F#", "G", "A", "A#", "C" ] },
+    {"root"  : "D#", "note" : [ "D#", "E", "G", "G#", "A#", "B", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F", "G#", "A", "B", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "F#", "A", "A#", "C", "C#", "D#" ]},
+    {"root"  : "F#", "note" : [ "F#", "G", "A#", "B", "C#", "D", "E" ] },
+    {"root"  : "G",  "note" : [ "G", "G#", "B", "C", "D", "D#", "F" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A", "C", "C#", "D#", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "A#", "C#", "D", "E", "F", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "B", "D", "D#", "F", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C", "D#", "E", "F#", "G", "A" ]  }
+  ],
+
+  "Dorian" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "G", "A", "A#" ]   },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G#", "A#", "B" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "A", "B", "C" ]     },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A#", "C", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "B", "C#", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "C", "D", "D#" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C#", "D#", "E" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "D", "E", "F" ]    },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D#", "F", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "E", "F#", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "F", "G", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F#", "G#", "A" ]  }
+  ],
+ 
+  "Phrygian" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "F", "G", "G#", "A#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F#", "G#", "A", "B" ]  },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "G", "A", "A#", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G#", "A#", "B", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F", "G", "A", "B", "C", "D" ]     },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A#", "C", "C#", "D#" ]},
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "B", "C#", "D", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "C", "D", "D#", "F" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C#", "D#", "E", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "D", "E", "F", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D#", "F", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C", "D", "E", "F#", "G", "A" ]    }
+  ],
+
+  "Lydian" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F#", "G", "A", "B" ]    },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "G", "G#", "A#", "C" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G#", "A", "B", "C#" ]  },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "A", "A#", "C", "D" ]   },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A#", "B", "C#", "D#" ]},
+    {"root"  : "F",  "note" : [ "F", "G", "A", "B", "C", "D", "E" ]     },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "C", "C#", "D#", "F" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C#", "D", "E", "F#" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "D", "D#", "F", "G" ]  },
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D#", "E", "F#", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "E", "F", "G", "A" ]    },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "F", "F#", "G#", "A#" ]}
+  ],
+
+  "Mixolydian" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F", "G", "A", "A#" ]    },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "F#", "G#", "A#", "B" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G", "A", "B", "C" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "G#", "A#", "C", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A", "B", "C#", "D" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "A#", "C", "D", "D#" ]   },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "B", "C#", "D#", "E" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C", "D", "E", "F" ]     },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "C#", "D#", "F", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D", "E", "F#", "G" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "D#", "F", "G", "G#" ]  },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "E", "F#", "G#", "A" ] }
+  ],
+
+  "Locrian" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "F", "F#", "G#", "A#" ]},
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F#", "G", "A", "B" ]   },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "G", "G#", "A#", "C" ]  },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G#", "A", "B", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F", "G", "A", "A#", "C", "D" ]    },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A#", "B", "C#", "D#" ]},
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "B", "C", "D", "E" ]    },
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "C", "C#", "D#", "F" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C#", "D", "E", "F#" ]  },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "D", "D#", "F", "G" ]   },
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D#", "E", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C", "D", "E", "F", "G", "A" ]     }
+  ],
+ 
+  "Jazz melodic minor" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "G", "A", "B" ]    },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G#", "A#", "C" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "A", "B", "C#" ]    },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A#", "C", "D" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "B", "C#", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "C", "D", "E" ]   },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C#", "D#", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "D", "E", "F#" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D#", "F", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "E", "F#", "G#" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "F", "G", "A" ]  },
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F#", "G#", "A#" ] }
+  ],
+
+  "Dorian b2" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "F", "G", "A", "A#" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F#", "G#", "A#", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "G", "A", "B", "C" ]    },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G#", "A#", "C", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F", "G", "A", "B", "C#", "D" ]    },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A#", "C", "D", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "B", "C#", "D#", "E" ]  },
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "C", "D", "E", "F" ]   },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C#", "D#", "F", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "D", "E", "F#", "G" ]   },
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D#", "F", "G", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C", "D", "E", "F#", "G#", "A" ]   }
+  ],
+ 
+  "Lydian augmented" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F#", "G#", "A", "B" ]   },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "G", "A", "A#", "C" ]  },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G#", "A#", "B", "C#" ] },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "A", "B", "C", "D" ]    },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A#", "C", "C#", "D#" ]},
+    {"root"  : "F",  "note" : [ "F", "G", "A", "B", "C#", "D", "E" ]    },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "C", "D", "D#", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C#", "D#", "E", "F#" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "D", "E", "F", "G" ]   },
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D#", "F", "F#", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "E", "F#", "G", "A" ]   },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "F", "G", "G#", "A#" ] }
+  ],
+
+  "Lydian b7" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F#", "G", "A", "A#" ]   },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "G", "G#", "A#", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G#", "A", "B", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "A", "A#", "C", "C#" ]  },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A#", "B", "C#", "D" ] },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "B", "C", "D", "D#" ]    },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "C", "C#", "D#", "E" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C#", "D", "E", "F" ]    },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "D", "D#", "F", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D#", "E", "F#", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "E", "F", "G", "G#" ]   },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "F", "F#", "G#", "A" ] }
+  ],
+ 
+  "Mixolydian b13" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F", "G", "G#", "A#" ]   },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "F#", "G#", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G", "A", "A#", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "G#", "A#", "B", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A", "B", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "A#", "C", "C#", "D#" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "B", "C#", "D", "E" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C", "D", "D#", "F" ]    },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "C#", "D#", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D", "E", "F", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "D#", "F", "F#", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "E", "F#", "G", "A" ]  }
+  ],
+
+  "Locrian #2" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F", "F#", "G#", "A#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "F#", "G", "A", "B" ]  },
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G", "G#", "A#", "C" ]   },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "G#", "A", "B", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A", "A#", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "A#", "B", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "B", "C", "D", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C", "C#", "D#", "F" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "C#", "D", "E", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D", "D#", "F", "G" ]    },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "D#", "E", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "E", "F", "G", "A" ]    }
+  ],
+ 
+  "Super Locrian" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "E", "F#", "G#", "A#" ]},
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F", "G", "A", "B" ]    },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "F#", "G#", "A#", "C" ] },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G", "A", "B", "C#" ]  },
+    {"root"  : "E",  "note" : [ "E", "F", "G", "G#", "A#", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A", "B", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "A#", "C", "D", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "B", "C#", "D#", "F" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C", "D", "E", "F#" ]   },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "C#", "D#", "F", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D", "E", "F#", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C", "D", "D#", "F", "G", "A" ]    }
+  ],
+
+  "Whole half diminished" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "E", "F#", "G#", "A#" ]},
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F", "G", "A", "B" ]    },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "F#", "G#", "A#", "C" ] },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G", "A", "B", "C#" ]  },
+    {"root"  : "E",  "note" : [ "E", "F", "G", "G#", "A#", "C", "D" ]   },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A", "B", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "A#", "C", "D", "E" ]   },
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "B", "C#", "D#", "F" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C", "D", "E", "F#" ]   },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "C#", "D#", "F", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D", "E", "F#", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C", "D", "D#", "F", "G", "A" ]    }
+  ],
+ 
+  "Half whole diminished" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "D#", "E", "F#", "G", "A", "A#" ]},
+    {"root"  : "C#", "note" : [ "C#", "D", "E", "F", "G", "G#", "A#", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "D#", "F", "F#", "G#", "A", "B", "C" ] },
+    {"root"  : "D#", "note" : [ "D#", "E", "F#", "G", "A", "A#", "C", "C#" ]},
+    {"root"  : "E",  "note" : [ "E", "F", "G", "G#", "A#", "B", "C#", "D" ] },
+    {"root"  : "F",  "note" : [ "F", "F#", "G#", "A", "B", "C", "D", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G", "A", "A#", "C", "C#", "D#", "E" ]},
+    {"root"  : "G",  "note" : [ "G", "G#", "A#", "B", "C#", "D", "E", "F" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "B", "C", "D", "D#", "F", "F#" ] },
+    {"root"  : "A",  "note" : [ "A", "A#", "C", "C#", "D#", "E", "F#", "G" ]},
+    {"root"  : "A#", "note" : [ "A#", "B", "C#", "D", "E", "F", "G", "G#" ] },
+    {"root"  : "B",  "note" : [ "B", "C", "D", "D#", "F", "F#", "G#", "A" ] }
+  ],
+
+  "Enigmatic" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "E", "F#", "G#", "A#", "B" ] },
+    {"root"  : "C#", "note" : [ "C#", "D", "F", "G", "A", "B", "C" ]    },
+    {"root"  : "D",  "note" : [ "D", "D#", "F#", "G#", "A#", "C", "C#" ]},
+    {"root"  : "D#", "note" : [ "D#", "E", "G", "A", "B", "C#", "D" ]   },
+    {"root"  : "E",  "note" : [ "E", "F", "G#", "A#", "C", "D", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "F#", "A", "B", "C#", "D#", "E" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G", "A#", "C", "D", "E", "F" ]   },
+    {"root"  : "G",  "note" : [ "G", "G#", "B", "C#", "D#", "F", "F#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "C", "D", "E", "F#", "G" ]   },
+    {"root"  : "A",  "note" : [ "A", "A#", "C#", "D#", "F", "G", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "B", "D", "E", "F#", "G#", "A" ]  },
+    {"root"  : "B",  "note" : [ "B", "C", "D#", "F", "G", "A", "A#" ]   }
+  ],
+ 
+  "Double harmonic" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "E", "F", "G", "G#", "B" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D", "F", "F#", "G#", "A", "C" ] },
+    {"root"  : "D",  "note" : [ "D", "D#", "F#", "G", "A", "A#", "C#" ]},
+    {"root"  : "D#", "note" : [ "D#", "E", "G", "G#", "A#", "B", "D" ] },
+    {"root"  : "E",  "note" : [ "E", "F", "G#", "A", "B", "C", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "F#", "A", "A#", "C", "C#", "E" ] },
+    {"root"  : "F#", "note" : [ "F#", "G", "A#", "B", "C#", "D", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "G#", "B", "C", "D", "D#", "F#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "C", "C#", "D#", "E", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "A#", "C#", "D", "E", "F", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "B", "D", "D#", "F", "F#", "A" ] },
+    {"root"  : "B",  "note" : [ "B", "C", "D#", "E", "F#", "G", "A#" ] }
+  ],
+
+  "Hungarian minor" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "F#", "G", "G#", "B" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "G", "G#", "A", "C" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F", "G#", "A", "A#", "C#" ] },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "A", "A#", "B", "D" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "A#", "B", "C", "D#" ] },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "B", "C", "C#", "E" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "C", "C#", "D", "F" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "C#", "D", "D#", "F#" ]},
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "D", "D#", "E", "G" ] },
+    {"root"  : "A",  "note" : [ "A", "B", "C", "D#", "E", "F", "G#" ]  },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "E", "F", "F#", "A" ] },
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "F", "F#", "G", "A#" ] }
+  ],
+ 
+  "Persian" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "E", "F", "F#", "G#", "B" ]  },
+    {"root"  : "C#", "note" : [ "C#", "D", "F", "F#", "G", "A", "C" ]   },
+    {"root"  : "D",  "note" : [ "D", "D#", "F#", "G", "G#", "A#", "C#" ]},
+    {"root"  : "D#", "note" : [ "D#", "E", "G", "G#", "A", "B", "D" ]   },
+    {"root"  : "E",  "note" : [ "E", "F", "G#", "A", "A#", "C", "D#" ]  },
+    {"root"  : "F",  "note" : [ "F", "F#", "A", "A#", "B", "C#", "E" ]  },
+    {"root"  : "F#", "note" : [ "F#", "G", "A#", "B", "C", "D", "F" ]   },
+    {"root"  : "G",  "note" : [ "G", "G#", "B", "C", "C#", "D#", "F#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "C", "C#", "D", "E", "G" ]   },
+    {"root"  : "A",  "note" : [ "A", "A#", "C#", "D", "D#", "F", "G#" ] },
+    {"root"  : "A#", "note" : [ "A#", "B", "D", "D#", "E", "F#", "A" ]  },
+    {"root"  : "B",  "note" : [ "B", "C", "D#", "E", "F", "G", "A#" ]   }
+  ],
+
+  "Arabian" : [
+    {"root"  : "C",  "note" : [ "C", "D", "E", "F", "F#", "G#", "A#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F", "F#", "G", "A", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "F#", "G", "G#", "A#", "C" ] },
+    {"root"  : "D#", "note" : [ "D#", "F", "G", "G#", "A", "B", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "G#", "A", "A#", "C", "D" ] },
+    {"root"  : "F",  "note" : [ "F", "G", "A", "A#", "B", "C#", "D#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A#", "B", "C", "D", "E" ] },
+    {"root"  : "G",  "note" : [ "G", "A", "B", "C", "C#", "D#", "F" ]  },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C", "C#", "D", "E", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C#", "D", "D#", "F", "G" ]  },
+    {"root"  : "A#", "note" : [ "A#", "C", "D", "D#", "E", "F#", "G#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D#", "E", "F", "G", "A" ]  }
+  ],                          
+ 
+  "Japanese" : [
+    {"root"  : "C",  "note" : [ "C", "C#", "F", "G", "G#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D", "F#", "G#", "A" ]},
+    {"root"  : "D",  "note" : [ "D", "D#", "G", "A", "A#" ] },
+    {"root"  : "D#", "note" : [ "D#", "E", "G#", "A#", "B" ]},
+    {"root"  : "E",  "note" : [ "E", "F", "A", "B", "C" ]   },
+    {"root"  : "F",  "note" : [ "F", "F#", "A#", "C", "C#" ]},
+    {"root"  : "F#", "note" : [ "F#", "G", "B", "C#", "D" ] },
+    {"root"  : "G",  "note" : [ "G", "G#", "C", "D", "D#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A", "C#", "D#", "E" ]},
+    {"root"  : "A",  "note" : [ "A", "A#", "D", "E", "F" ]  },
+    {"root"  : "A#", "note" : [ "A#", "B", "D#", "F", "F#" ]},
+    {"root"  : "B",  "note" : [ "B", "C", "E", "F#", "G" ]  }
+  ],
+
+  "Egyptian" : [
+    {"root"  : "C",  "note" : [ "C", "D", "F", "G", "A#" ]    },
+    {"root"  : "C#", "note" : [ "C#", "D#", "F#", "G#", "B" ] },
+    {"root"  : "D",  "note" : [ "D", "E", "G", "A", "C" ]     },
+    {"root"  : "D#", "note" : [ "D#", "F", "G#", "A#", "C#" ] },
+    {"root"  : "E",  "note" : [ "E", "F#", "A", "B", "D" ]    },
+    {"root"  : "F",  "note" : [ "F", "G", "A#", "C", "D#" ]   },
+    {"root"  : "F#", "note" : [ "F#", "G#", "B", "C#", "E" ]  },
+    {"root"  : "G",  "note" : [ "G", "A", "C", "D", "F" ]     },
+    {"root"  : "G#", "note" : [ "G#", "A#", "C#", "D#", "F#" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "D", "E", "G" ]     },
+    {"root"  : "A#", "note" : [ "A#", "C", "D#", "F", "G#" ]  },
+    {"root"  : "B",  "note" : [ "B", "C#", "E", "F#", "A" ]   }
+  ],
+ 
+  "Hirajoshi" : [
+    {"root"  : "C",  "note" : [ "C", "D", "D#", "G", "G#" ] },
+    {"root"  : "C#", "note" : [ "C#", "D#", "E", "G#", "A" ]},
+    {"root"  : "D",  "note" : [ "D", "E", "F", "A", "A#" ]  },
+    {"root"  : "D#", "note" : [ "D#", "F", "F#", "A#", "B" ]},
+    {"root"  : "E",  "note" : [ "E", "F#", "G", "B", "C" ]  },
+    {"root"  : "F",  "note" : [ "F", "G", "G#", "C", "C#" ] },
+    {"root"  : "F#", "note" : [ "F#", "G#", "A", "C#", "D" ]},
+    {"root"  : "G",  "note" : [ "G", "A", "A#", "D", "D#" ] },
+    {"root"  : "G#", "note" : [ "G#", "A#", "B", "D#", "E" ]},
+    {"root"  : "A",  "note" : [ "A", "B", "C", "E", "F" ]   },
+    {"root"  : "A#", "note" : [ "A#", "C", "C#", "F", "F#" ]},
+    {"root"  : "B",  "note" : [ "B", "C#", "D", "F#", "G" ] }
+  ]
+
+}    
