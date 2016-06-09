@@ -398,6 +398,56 @@ function playZhred() {
       playToneJS(seqReady, tempo);
     }
   }
+  else if (ngram == "show all") {
+    /* temporary */
+    var one   = [ "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E"];
+    var two   = [ "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+    var three = [ "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G"];
+    var four  = [ "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D"];
+    var five  = [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A"];
+    var six   = [ "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E"];
+
+    var fretNoteTable = [];
+        fretNoteTable.push(["0"]);
+        fretNoteTable.push(one); 
+        fretNoteTable.push(two);
+        fretNoteTable.push(three);
+        fretNoteTable.push(four);
+        fretNoteTable.push(five);
+        fretNoteTable.push(six);
+
+    for (var i = 1; i <= 6; i++) {
+      for (var j = 0; j <= 24; j++) {
+        var d = _foo(f, i, j, fretNoteTable[i][j]);
+        ZhredCanvas_Notes.push(d);
+      }
+    }
+
+    function _foo(pos, s, f, marker) {
+      var string = pos[1] + (s - 1) * 30;
+      var fret = pos[0] + 20 + (f - 1) * 40;
+
+      var circle = new Path.Circle(new Point(fret, string), 8);
+        circle.style = {
+        fillColor: '#ddd',
+        strokeColor: 'black',
+        strokeWidth: 1,
+        shadowColor: new Color(0, 0, 0),
+        shadowBlur: 12,
+        shadowOffset: new Point(5, 5)
+      };
+
+      var text = new PointText(new Point(fret, string+4));
+      text.justification = 'center';
+      text.fillColor = 'black';
+      text.fontSize = 9;
+      text.content = marker;
+
+      var group = new Group([circle, text]);
+      return group;
+    };
+  }
+
 }
 
 function loadDrawer(processed) {
