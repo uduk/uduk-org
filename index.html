@@ -37,12 +37,75 @@
       </span>
     </div>
 
+    <div id="scaleForm" style="visibility: hidden; display: none; width: 340px; height: 250px; background-color: #434A54; opacity: 0.9; color: #fff; position: fixed; bottom: 68px; right: 20px; border: 1px solid #ddd;">
+      <div class="row">
+
+        <h4>Music Scale</h4>
+        <blockquote>
+          <p>Scales containing a proper superset of your notes.</p>
+          <footer>Musical scales in <cite title="Source Title">Wikipedia</cite></footer>
+        </blockquote>
+
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">♫</div>
+                <input type="text" class="form-control" id="inputRoot" placeholder="Root, i.e: C#">
+              <div class="input-group-addon">♮</div>
+            </div>
+            <p>
+            <div class="form-group">
+              <select class="form-control" id="selectScale">
+              <option>All</option>
+              <option>Major</option>
+              <option>Natural minor</option>
+              <option>Harmonic minor</option>
+              <option>Melodic minor</option>
+              <option>Major pentatonic</option>
+              <option>Minor pentatonic</option>
+              <option>Blues</option>
+              <option>Major blues</option>
+              <option>Minor blues</option>
+              <option>Augmented</option>
+              <option>Diminished</option>
+              <option>Phrygian-Dominant</option>
+              <option>Dorian</option>
+              <option>Phrygian</option>
+              <option>Lydian</option>
+              <option>Mixolydian</option>
+              <option>Locrian</option>
+              <option>Jazz melodic minor</option>
+              <option>Dorian b2</option>
+              <option>Lydian augmented</option>
+              <option>Lydian b7</option>
+              <option>Mixolydian b13</option>
+              <option>Locrian #2</option>
+              <option>Super locrian</option>
+              <option>Whole half diminished</option>
+              <option>Half whole diminished</option>
+              <option>Enigmatic</option>
+              <option>Double harmonic</option>
+              <option>Hungarian minor</option>
+              <option>Persian</option>
+              <option>Arabian</option>
+              <option>Japanese</option>
+              <option>Egyptian</option>
+              <option>Hirajoshi</option>
+              </select>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+    
     <div id="canvas" style="visibility: hidden; display: none"><canvas id="Canvas6" width="1200" height="600" style="border:1px solid #333333;"></canvas></div>
 
     <div id="footer" class="mastfoot" style="visibility: hidden; display: none">
       <span id="auto-pilot" class="label label-default"><a href="#" id="autopilotref">Auto Pilot</a></span>
       <span id="blind" class="label label-primary"><a href="#" id="blindref">Blind Mode</a></span>
-      <span class="label label-success"><a href="#">Theory</a></span>
+      <span id="scale" class="label label-success"><a href="#">Scale</a></span>
       <span id="mainz" class="label label-info"><a href="#" id="mainzref">Main-Z</a></span>
       <span id="zonify" class="label label-danger"><a href="#">Zonify</a></span>
       <span class="label label-warning"><a href="#">Dataset</a></span>
