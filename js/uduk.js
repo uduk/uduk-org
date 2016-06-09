@@ -508,6 +508,63 @@ $(document).ready(function() {
     }
   });
   
+  var ZhredBoard_Scale = false;
+  $("#scale").click(function() {
+    ZhredBoard_Scale = !ZhredBoard_Scale;
+    if (ZhredBoard_Scale)
+      $('#scaleForm').delay(200).css('visibility','visible').fadeIn("slow");
+    else
+      $('#scaleForm').delay(200).css('visibility','none').fadeOut("slow");
+  });
+
+  $('#selectScale').on('change', function() {
+
+    var root = document.getElementById("inputRoot").value.toUpperCase();
+    if (root == "GB") {
+      root = "F#";
+    }
+    else if (root == "AB") {
+      root = "G#";
+    }
+    else if (root == "BB") {
+      root = "A#";
+    }
+    else if (root == "DB") {
+      root = "C#";
+    }
+    else if (root == "EB") {
+      root = "D#";
+    }
+
+    var scale = this.value;
+
+    if ( (root.match(/[aA-gG]/g) || root.match(/[aA-gG][#]/g)) && root.length >= 1 && root.length <=2)
+    {
+
+      $.getJSON("http://uduk.org/scale.json", function(obj) {
+        var name = obj[scale];
+        $.each(name, function(i, scale) {
+            if (scale.root == root) {
+              clearAllCanvas();
+
+              for (var i = 1; i <= 6; i++) {
+                var seq = UdukSequence.toFretNote(i, scale.note)
+
+                for (var j = 0; j < seq.length; j++) {
+                  var z = UdukSequence.splitNote(seq[j]);
+                  var d = drawNote6(f, z[0], z[1], "");
+                  ZhredCanvas_Notes.push(d);
+                }
+              }
+
+            }
+        });
+      });
+      
+    }
+
+  });
+  
   $("#zonify").click(function() {
     var noteMap = ["C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4"];
     var ngram = document.getElementById('ngram').value;
