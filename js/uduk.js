@@ -399,6 +399,9 @@ function playZhred() {
     }
   }
   else if (ngram == "show all") {
+   
+    clearAllCanvas();
+   
     /* temporary */
     var one   = [ "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E"];
     var two   = [ "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
