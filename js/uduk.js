@@ -602,7 +602,7 @@ $(document).ready(function() {
     $('#deviceDiv').delay(200).css('visibility','visible').hide().fadeIn("slow");
 
     var polySynth = new Tone.PolySynth(4, Tone.MonoSynth).toMaster();
-    polySynth.volume.value = -20;
+    polySynth.volume.value = -28;
     polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
 
     var timer_t = setInterval(intervalSequence, 1800);
