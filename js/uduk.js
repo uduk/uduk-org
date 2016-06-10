@@ -545,7 +545,9 @@ $(document).ready(function() {
         var name = obj[scale];
         $.each(name, function(i, scale) {
             if (scale.root == root) {
+             
               clearAllCanvas();
+              ZhredCanvas_TextItem.content = scale.note.toString();
 
               for (var i = 1; i <= 6; i++) {
                 var seq = UdukSequence.toFretNote(i, scale.note)
