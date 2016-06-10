@@ -10,6 +10,7 @@ o   o o-o   o   o o  o
 
 var f = UdukFretboard6(100, 120, ["e", "B", "G", "D", "A", "E"]);
 
+var ZhredMIDI = false;
 var ZhredCanvas_Line, ZhredCanvas_Lines = [], ZhredCanvas_Circles = [], ZhredCanvas_Notes =[];
 var ZhredCanvas_Raster, ZhredCanvas_Block;
 var content = "zhredBoard | klik dan geser / click and drag / cliquer et faire glisser / クリックしてドラッグ / 클릭하고 드래그";
@@ -602,14 +603,33 @@ $(document).ready(function() {
     $('#deviceDiv').delay(200).css('visibility','visible').hide().fadeIn("slow");
 
     var polySynth = new Tone.PolySynth(4, Tone.MonoSynth).toMaster();
-    polySynth.volume.value = -28;
+    polySynth.volume.value = -36;
     polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
+
+    UdukMIDI.initialize();
+    
+    var s1 = [52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76];
+    var s2 = s1.slice(0);
+    s2 = s2.reverse();
+    var sequence = [];
+
+    for (var i = 0; i < s1.length; i++) {
+      sequence.push(s1[i]);
+    }
+
+    for (var i = 0; i < s1.length; i++) {
+      sequence.push(s2[i]);
+    }
+
+    UdukMIDI.playSequence(sequence, 75);
 
     var timer_t = setInterval(intervalSequence, 1800);
     function intervalSequence() {
       $('#deviceDiv').delay(200).css('visibility','none').fadeOut("slow");
       clearInterval(timer_t);
     }
+    
+    ZhredMIDI = true;
   });
   
   var inputElement = document.getElementById("upload");
