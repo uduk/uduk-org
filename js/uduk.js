@@ -541,7 +541,7 @@ $(document).ready(function() {
     if ( (root.match(/[aA-gG]/g) || root.match(/[aA-gG][#]/g)) && root.length >= 1 && root.length <=2)
     {
 
-      $.getJSON("http://uduk.org/scale.json", function(obj) {
+      $.getJSON("scale.json", function(obj) {
         var name = obj[scale];
         $.each(name, function(i, scale) {
             if (scale.root == root) {
