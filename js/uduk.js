@@ -547,8 +547,8 @@ $(document).ready(function() {
             if (scale.root == root) {
              
               clearAllCanvas();
-              ZhredCanvas_TextItem.content = scale.note.toString();
-
+              document.getElementById("ngram").value = scale.note.toString();
+              
               for (var i = 1; i <= 6; i++) {
                 var seq = UdukSequence.toFretNote(i, scale.note)
 
