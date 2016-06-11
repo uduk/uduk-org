@@ -258,20 +258,23 @@ function playAutoPilot() {
   Tone.Transport.start();
 }
 
-function playToneJS(sequence, tempo) {
-  Tone.Transport.timeSignature = [4, 4];
-  Tone.Transport.bpm.value = tempo;
-  Tone.Transport.PPQ.value = 96;
+function playZhred(sequence, tempo) {
+  if (!ZhredMIDI) {
+    Tone.Transport.timeSignature = [4, 4];
+    Tone.Transport.bpm.value = tempo;
+    Tone.Transport.PPQ.value = 96;
 
-  ToneJS_Play_Sequence = new Tone.Sequence(function(time, note){
-    ToneJS_Synth_L.triggerAttackRelease(note, "16n", time);
-    ToneJS_Synth_R.triggerAttackRelease(note, "16n", time);
-  },sequence, "16n").start();
+    ToneJS_Play_Sequence = new Tone.Sequence(function(time, note){
+      ToneJS_Synth_L.triggerAttackRelease(note, "16n", time);
+      ToneJS_Synth_R.triggerAttackRelease(note, "16n", time);
+    },sequence, "16n").start();
 
-  ToneJS_Play_Sequence.loop = false;
-  ToneJS_Play_Sequence.humanize = true;
+    ToneJS_Play_Sequence.loop = false;
+    ToneJS_Play_Sequence.humanize = true;
 
-  Tone.Transport.start();
+    Tone.Transport.start();
+  }
+  console.log(sequence);
 }
 
 function ngramProcessingChromatic(sequence, size, scale) {
@@ -317,7 +320,7 @@ function playZhred() {
       ZhredCanvas_Notes.push(d);
     }
     var seqReady = UdukSequence.toMIDI(uniqueSeq);
-    playToneJS(seqReady, 180);
+    playZhred(seqReady, 180);
   }
 
   else if (ngram.match(/metronome\s*\d{3}/g)) {
@@ -343,7 +346,7 @@ function playZhred() {
       }
 
       var seqReady = UdukSequence.toMIDI(filtered);
-      playToneJS(seqReady, tempo);
+      playZhred(seqReady, tempo);
     }
   }
   else if (ngram.match(/\d{1} [\174] chromatic [\174] \d{3}/g))
@@ -364,7 +367,7 @@ function playZhred() {
     }
 
     var seqReady = UdukSequence.toMIDI(processed);
-    playToneJS(seqReady, tempo);
+    playZhred(seqReady, tempo);
   }
   else if (ngram.match(/\d{1} [a-zA-Z 0-9\#\,\|]* \d{3}/g))
   {
@@ -386,7 +389,7 @@ function playZhred() {
       }
 
       var seqReady = UdukSequence.toMIDI(processed);
-      playToneJS(seqReady, tempo);
+      playZhred(seqReady, tempo);
     }
   }
 
@@ -416,7 +419,7 @@ function handleFile(evt) {
       loadDrawer(processed); 
 
       var seqReady = UdukSequence.toMIDI(processed);
-      playToneJS(seqReady, tempo);
+      playZhred(seqReady, tempo);
     }
     r.readAsText(f);
   } else { alert("Failed to load file"); }
@@ -592,7 +595,7 @@ $(document).ready(function() {
           }
         }
               
-        playToneJS(seqReady, Math.floor(Math.random() * (171 - 160)) + 160);
+        playZhred(seqReady, Math.floor(Math.random() * (171 - 160)) + 160);
        });
 
     }
@@ -602,7 +605,7 @@ $(document).ready(function() {
   $("#device").click(function() {
     $('#deviceDiv').delay(200).css('visibility','visible').hide().fadeIn("slow");
 
-    if (ZhredMIDI == false) {
+    if (!ZhredMIDI) {
       var polySynth = new Tone.PolySynth(4, Tone.MonoSynth).toMaster();
       polySynth.volume.value = -36;
       polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
