@@ -602,11 +602,11 @@ $(document).ready(function() {
   $("#device").click(function() {
     $('#deviceDiv').delay(200).css('visibility','visible').hide().fadeIn("slow");
 
-    var polySynth = new Tone.PolySynth(4, Tone.MonoSynth).toMaster();
-    polySynth.volume.value = -36;
-    polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
-
     if (ZhredMIDI == false) {
+      var polySynth = new Tone.PolySynth(4, Tone.MonoSynth).toMaster();
+      polySynth.volume.value = -36;
+      polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
+    
       UdukMIDI.initialize();
     
       var s1 = [52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76];
