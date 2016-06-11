@@ -258,7 +258,7 @@ function playAutoPilot() {
   Tone.Transport.start();
 }
 
-function playZhred(sequence, tempo) {
+function playToneJS(sequence, tempo) {
   if (!ZhredMIDI) {
     Tone.Transport.timeSignature = [4, 4];
     Tone.Transport.bpm.value = tempo;
@@ -274,7 +274,8 @@ function playZhred(sequence, tempo) {
 
     Tone.Transport.start();
   }
-  console.log(sequence);
+  else {
+  }
 }
 
 function ngramProcessingChromatic(sequence, size, scale) {
@@ -320,7 +321,7 @@ function playZhred() {
       ZhredCanvas_Notes.push(d);
     }
     var seqReady = UdukSequence.toMIDI(uniqueSeq);
-    playZhred(seqReady, 180);
+    playToneJS(seqReady, 180);
   }
 
   else if (ngram.match(/metronome\s*\d{3}/g)) {
@@ -346,7 +347,7 @@ function playZhred() {
       }
 
       var seqReady = UdukSequence.toMIDI(filtered);
-      playZhred(seqReady, tempo);
+      playToneJS(seqReady, tempo);
     }
   }
   else if (ngram.match(/\d{1} [\174] chromatic [\174] \d{3}/g))
@@ -367,7 +368,7 @@ function playZhred() {
     }
 
     var seqReady = UdukSequence.toMIDI(processed);
-    playZhred(seqReady, tempo);
+    playToneJS(seqReady, tempo);
   }
   else if (ngram.match(/\d{1} [a-zA-Z 0-9\#\,\|]* \d{3}/g))
   {
@@ -389,7 +390,7 @@ function playZhred() {
       }
 
       var seqReady = UdukSequence.toMIDI(processed);
-      playZhred(seqReady, tempo);
+      playToneJS(seqReady, tempo);
     }
   }
 
@@ -419,7 +420,7 @@ function handleFile(evt) {
       loadDrawer(processed); 
 
       var seqReady = UdukSequence.toMIDI(processed);
-      playZhred(seqReady, tempo);
+      playToneJS(seqReady, tempo);
     }
     r.readAsText(f);
   } else { alert("Failed to load file"); }
@@ -595,7 +596,7 @@ $(document).ready(function() {
           }
         }
               
-        playZhred(seqReady, Math.floor(Math.random() * (171 - 160)) + 160);
+        playToneJS(seqReady, Math.floor(Math.random() * (171 - 160)) + 160);
        });
 
     }
