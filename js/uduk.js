@@ -623,14 +623,14 @@ $(document).ready(function() {
       }
 
       UdukMIDI.playSequence(sequence, 75);
-
-      var timer_t = setInterval(intervalSequence, 1800);
-      function intervalSequence() {
-        $('#deviceDiv').delay(200).css('visibility','none').fadeOut("slow");
-        clearInterval(timer_t);
-      }
       
       ZhredMIDI = true;
+    }
+    
+    var timer_t = setInterval(intervalSequence, 1800);
+    function intervalSequence() {
+      $('#deviceDiv').delay(200).css('visibility','none').fadeOut("slow");
+      clearInterval(timer_t);
     }
     
   });
