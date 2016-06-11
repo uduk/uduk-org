@@ -402,7 +402,7 @@ function playZhred() {
     }
   }
   else if (ngram.match(/midi/g)) {
-    if (ZhredMIdi) {
+    if (ZhredMIdI) {
       var input = ngram.split(" ");
       var message = [];
       var command = parseInt(input[1]);
@@ -491,6 +491,9 @@ $(document).ready(function() {
     }
     else if (ngram.match(/(http(s?))\:\/\//gi)) {
       $("#ngram").css("background-color", "#C0FF3E");
+    }
+    else if (ngram.match(/midi/g)) {
+      $("#ngram").css("background-color", "#87CEFA");
     }
     else {
       $("#ngram").css("background-color", "#fff");
@@ -631,22 +634,6 @@ $(document).ready(function() {
       polySynth.triggerAttackRelease(["C2", "E2", "G3", "B3"], "2n");
     
       UdukMIDI.initialize();
-    
-      var s1 = [52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76];
-      var s2 = s1.slice(0);
-      s2 = s2.reverse();
-      var sequence = [];
-
-      for (var i = 0; i < s1.length; i++) {
-        sequence.push(s1[i]);
-      }
-
-      for (var i = 0; i < s1.length; i++) {
-        sequence.push(s2[i]);
-      }
-
-      UdukMIDI.playSequence(sequence, 75);
-      
       ZhredMIDI = true;
     }
     
