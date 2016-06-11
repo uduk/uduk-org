@@ -402,7 +402,7 @@ function playZhred() {
     }
   }
   else if (ngram.match(/midi/g)) {
-    if (ZhredMIdI) {
+    if (ZhredMIDI) {
       var input = ngram.split(" ");
       var message = [];
       var command = parseInt(input[1]);
@@ -410,6 +410,7 @@ function playZhred() {
       message.push(command);
       message.push(program);
       UdukMIDI.sendMessage(message);
+      clearAllCanvas();
     }
   }
 
