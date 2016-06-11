@@ -401,6 +401,17 @@ function playZhred() {
       playToneJS(seqReady, tempo);
     }
   }
+  else if (ngram.match(/midi/g)) {
+    if (ZhredMIdi) {
+      var input = ngram.split(" ");
+      var message = [];
+      var command = parseInt(input[1]);
+      var program = parseInt(input[2]);
+      message.push(command);
+      message.push(program);
+      UdukMIDI.sendMessage(message);
+    }
+  }
 
 }
 
