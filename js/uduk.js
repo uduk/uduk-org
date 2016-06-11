@@ -275,6 +275,14 @@ function playToneJS(sequence, tempo) {
     Tone.Transport.start();
   }
   else {
+    var tone = new Tone();
+    var zequence = [];
+    var t = UdukMIDI.restTiming(tempo);
+
+    for (var i = 0; i < sequence.length; i++) {
+      zequence.push(tone.noteToMidi(sequence[i]));
+    }
+    UdukMIDI.playSequence(zequence, t['sixteenN']); 
   }
 }
 
