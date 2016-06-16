@@ -13,6 +13,11 @@ var f = UdukFretboard6(100, 120, ["e", "B", "G", "D", "A", "E"]);
 var ZhredMIDI = false;
 var ZhredCanvas_Line, ZhredCanvas_Lines = [], ZhredCanvas_Circles = [], ZhredCanvas_Notes =[];
 var ZhredCanvas_Raster, ZhredCanvas_Block;
+
+var ZhredCanvas_X;
+var ZhredCanvas_Y;
+var ZhredCanvas_Rects = [];
+
 var content = "zhredBoard | klik dan geser / click and drag / cliquer et faire glisser / クリックしてドラッグ / 클릭하고 드래그";
 
 var ZhredCanvas_TextItem = new PointText({
@@ -50,11 +55,15 @@ function clearAllCanvas() {
   for (var i = 0; i < ZhredCanvas_Lines.length; i++) {
     ZhredCanvas_Lines[i].remove();
   }
-
+  for (var i = 0; i < ZhredCanvas_Rects.length; i++) {
+    ZhredCanvas_Rects[i].remove();
+  }
+  
   ZhredSequence_HitNote.splice(0, ZhredSequence_HitNote.length);
   ZhredCanvas_Lines.splice(0, ZhredCanvas_Lines.length);
   ZhredCanvas_Circles.splice(0, ZhredCanvas_Circles.length);
-
+  ZhredCanvas_Rects.splice(0, ZhredCanvas_Rects.length);
+ 
   clearDots();
 
   $("#ngram").css("background-color", "#fff");
@@ -85,7 +94,7 @@ function clearAllCanvas() {
 }
 
 function onMouseDown(event) {
-  if (checkCanvasBoundary(event)) { 
+  if (checkCanvasBoundary(event) && event.modifiers.shift == false) { 
     var x = getHitNote(event);
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
     cDown = new Path.Circle({
@@ -106,18 +115,43 @@ function onMouseDown(event) {
     var r = UdukSequence.splitNote(x);
     ToneJS_Synth_R.triggerAttackRelease(UdukSequence.toMIDINote(r[0], r[1]), "16n");
   }
+  else if (checkCanvasBoundary(event) && event.modifiers.shift) {
+    ZhredCanvas_X = event.point.x;
+    ZhredCanvas_Y = event.point.y;
+    var topLeft = new Point(ZhredCanvas_X, ZhredCanvas_Y);
+    var rectSize = new Size(0, 0);
+    var rectangle = new Rectangle(topLeft, rectSize);
+    var path = new Path.Rectangle(rectangle);
+    path.fillColor = 'black';
+    path.opacity = 0.4;
+    ZhredCanvas_Rects.push(path); 
+  }
 }
 
 function onMouseDrag(event) {
-  if (checkCanvasBoundary(event)) { 
+  if (checkCanvasBoundary(event) && event.modifiers.shift == false) { 
     getHitNote(event);
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
     ZhredCanvas_Line.add(event.point);
   }
+  else if (checkCanvasBoundary(event) && event.modifiers.shift) { 
+    var from = new Point(ZhredCanvas_X, ZhredCanvas_Y);
+    var to = new Point(event.point.x, event.point.y);
+    var r = new Rectangle(from, to);
+    var p = new Path.Rectangle(r);
+    p.fillColor = 'black';
+    p.opacity = 0.4;
+    ZhredCanvas_Rects.push(p);
+
+    for (var i = 0; i < ZhredCanvas_Rects.length - 1; i++) {
+      ZhredCanvas_Rects[i].remove();
+    }
+  }
+
 }
 
 function onMouseUp(event) {
-  if (checkCanvasBoundary(event)) { 
+  if (checkCanvasBoundary(event) && event.modifiers.shift == false) { 
     ZhredCanvas_TextItem.content = 'position: ' + event.point;
     cUp = new Path.Circle({
       center: event.point,
